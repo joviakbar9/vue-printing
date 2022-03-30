@@ -31,7 +31,7 @@
       />
     </div>
 
-    <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 mb-6">
+    <!-- <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 mb-6">
       <div class="flex flex-col justify-between">
         <card-transaction-bar
           v-for="(transaction,index) in transactionBarItems"
@@ -52,9 +52,9 @@
           :date="client.created"
           :progress="client.progress"/>
       </div>
-    </div>
+    </div> -->
 
-    <title-sub-bar :icon="mdiChartPie" title="Trends overview"/>
+    <!-- <title-sub-bar :icon="mdiChartPie" title="Trends overview"/>
 
     <card-component
       title="Performance"
@@ -66,7 +66,7 @@
       <div v-if="chartData">
         <line-chart :data="chartData" class="h-96"/>
       </div>
-    </card-component>
+    </card-component> -->
 
     <title-sub-bar :icon="mdiAccountMultiple" title="Clients"/>
 
@@ -95,7 +95,7 @@ import {
   mdiChartPie
 } from '@mdi/js'
 import * as chartConfig from '@/components/Charts/chart.config.js'
-import LineChart from '@/components/Charts/LineChart.vue'
+// import LineChart from '@/components/Charts/LineChart.vue'
 import MainSection from '@/components/MainSection.vue'
 import TitleBar from '@/components/TitleBar.vue'
 import HeroBar from '@/components/HeroBar.vue'
@@ -103,8 +103,8 @@ import CardWidget from '@/components/CardWidget.vue'
 import CardComponent from '@/components/CardComponent.vue'
 import ClientsTable from '@/components/ClientsTable.vue'
 import Notification from '@/components/Notification.vue'
-import CardTransactionBar from '@/components/CardTransactionBar.vue'
-import CardClientBar from '@/components/CardClientBar.vue'
+// import CardTransactionBar from '@/components/CardTransactionBar.vue'
+// import CardClientBar from '@/components/CardClientBar.vue'
 import TitleSubBar from '@/components/TitleSubBar.vue'
 
 export default {
@@ -113,14 +113,14 @@ export default {
     TitleSubBar,
     MainSection,
     ClientsTable,
-    LineChart,
+    // LineChart,
     CardComponent,
     CardWidget,
     HeroBar,
     TitleBar,
-    Notification,
-    CardTransactionBar,
-    CardClientBar
+    Notification
+    // CardTransactionBar,
+    // CardClientBar
   },
   setup () {
     const titleStack = ref(['Admin', 'Dashboard'])

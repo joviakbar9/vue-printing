@@ -2,13 +2,14 @@ import {
   mdiAccountCircle,
   mdiDesktopMac,
   mdiLock,
-  mdiAlertCircle,
+  // mdiAlertCircle,
   mdiMonitorShimmer,
   mdiSquareEditOutline,
   mdiTable,
   mdiViewList,
   mdiTelevisionGuide,
-  mdiResponsive
+  mdiAccountGroup
+  // mdiResponsive
 } from '@mdi/js'
 
 export default [
@@ -25,8 +26,67 @@ export default [
     {
       to: '/tables',
       label: 'Transaksi',
+      subLabel: 'Submenus Example',
       icon: mdiTable,
+      menu: [
+        {
+          to: '/daftarpemesanan',
+          label: 'Daftar Pemesanan',
+          icon: mdiSquareEditOutline
+        },
+        {
+          to: '/validasipembayaran',
+          label: 'Validasi Pembayaran',
+          icon: mdiSquareEditOutline
+        }
+      ]
+    },
+    {
+      label: 'Produk',
+      subLabel: 'Submenus Example',
+      icon: mdiViewList,
+      menu: [
+        {
+          label: 'Daftar Produk'
+        },
+        {
+          label: 'Kategori Produk'
+        }
+      ]
+    },
+    {
+      to: '/daftarpegawai',
+      label: 'Daftar Pegawai',
+      icon: mdiSquareEditOutline
+    },
+    {
+      to: '/penggajian',
+      label: 'Penggajian',
+      icon: mdiSquareEditOutline
+    },
+    {
+      label: 'Keuangan',
+      subLabel: 'Submenus Example',
+      icon: mdiViewList,
+      menu: [
+        {
+          label: 'Laporan Pengeluaran'
+        },
+        {
+          label: 'Laporan Penjualan'
+        }
+      ]
+    },
+    {
+      to: '/user',
+      label: 'User',
+      icon: mdiAccountGroup,
       updateMark: true
+    },
+    {
+      to: '/member',
+      label: 'Member',
+      icon: mdiSquareEditOutline
     },
     {
       to: '/forms',
@@ -38,11 +98,11 @@ export default [
       label: 'UI',
       icon: mdiTelevisionGuide
     },
-    {
-      to: '/responsive',
-      label: 'Responsive',
-      icon: mdiResponsive
-    },
+    // {
+    //   to: '/responsive',
+    //   label: 'Responsive',
+    //   icon: mdiResponsive
+    // },
     {
       to: '/profile',
       label: 'Profile',
@@ -52,31 +112,18 @@ export default [
       to: '/login',
       label: 'Login',
       icon: mdiLock
-    },
-    {
-      to: '/error',
-      label: 'Error',
-      icon: mdiAlertCircle
-    },
-    {
-      label: 'Submenus',
-      subLabel: 'Submenus Example',
-      icon: mdiViewList,
-      menu: [
-        {
-          label: 'Sub-item One'
-        },
-        {
-          label: 'Sub-item Two'
-        }
-      ]
     }
+    // {
+    //   to: '/error',
+    //   label: 'Error',
+    //   icon: mdiAlertCircle
+    // }
   ],
   'About',
   [
     {
-      href: 'https://justboil.me/tailwind-admin-templates/vue-dashboard/',
-      label: 'Premium version',
+      href: '#',
+      label: 'Test',
       icon: mdiMonitorShimmer,
       target: '_blank'
     }

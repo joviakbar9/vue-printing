@@ -22,29 +22,29 @@
   <table>
     <thead>
     <tr>
-      <!-- <th v-if="checkable"></th> -->
+      <th v-if="checkable"></th>
+      <th></th>
       <th>No.</th>
-      <th>No. Transaksi</th>
       <th>Nama</th>
-      <th>No. Hp</th>
-      <th>Tanggal Pemesanan</th>
-      <th>Total</th>
-      <th>Status Pembayaran</th>
+      <th>Username</th>
+      <th>Tipe Akun</th>
       <th></th>
     </tr>
     </thead>
     <tbody>
     <tr v-for="client in itemsPaginated" :key="client.id">
-      <!-- <checkbox-cell v-if="checkable" @checked="checked($event, client)"/> -->
-      <td data-label="No. ">{{ client.nomor }}</td>
+      <checkbox-cell v-if="checkable" @checked="checked($event, client)"/>
+      <td class="image-cell">
+        <user-avatar :username="client.name" class="image" />
+      </td>
       <td data-label="Name">{{ client.name }}</td>
       <td data-label="Company">{{ client.company }}</td>
       <td data-label="City">{{ client.city }}</td>
-      <td data-label="Created">
-        <small class="text-gray-500 dark:text-gray-400" :title="client.created">{{ client.created }}</small>
-      </td>
       <td data-label="Progress" class="progress-cell">
         <progress max="100" :value="client.progress">{{ client.progress }}</progress>
+      </td>
+      <td data-label="Created">
+        <small class="text-gray-500 dark:text-gray-400" :title="client.created">{{ client.created }}</small>
       </td>
       <td class="actions-cell">
         <jb-buttons type="justify-start lg:justify-end" no-wrap>
@@ -78,21 +78,21 @@ import { computed, ref } from 'vue'
 import { useStore } from 'vuex'
 import { mdiEye, mdiTrashCan } from '@mdi/js'
 import ModalBox from '@/components/ModalBox.vue'
-// import CheckboxCell from '@/components/CheckboxCell.vue'
+import CheckboxCell from '@/components/CheckboxCell.vue'
 import Level from '@/components/Level.vue'
 import JbButtons from '@/components/JbButtons.vue'
 import JbButton from '@/components/JbButton.vue'
-// import UserAvatar from '@/components/UserAvatar.vue'
+import UserAvatar from '@/components/UserAvatar.vue'
 
 export default {
   name: 'ClientsTable',
   components: {
     ModalBox,
-    // CheckboxCell,
+    CheckboxCell,
     Level,
     JbButtons,
-    JbButton
-    // UserAvatar
+    JbButton,
+    UserAvatar
   },
   props: {
     checkable: Boolean

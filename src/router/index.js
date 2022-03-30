@@ -14,7 +14,7 @@ const routes = [
   },
   {
     meta: {
-      title: 'Tables'
+      title: 'Transaksi'
     },
     path: '/tables',
     name: 'tables',
@@ -22,6 +22,54 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "tables" */ '@/views/Tables.vue')
+  },
+  {
+    meta: {
+      title: 'Daftar Pemesanan'
+    },
+    path: '/daftarpemesanan',
+    name: 'daftarpemesanan',
+    component: () => import(/* webpackChunkName: "tables" */ '@/views/DaftarPemesanan.vue')
+  },
+  {
+    meta: {
+      title: 'Daftar Pegawai'
+    },
+    path: '/daftarpegawai',
+    name: 'daftarpegawai',
+    component: () => import(/* webpackChunkName: "tables" */ '@/views/DaftarPegawai.vue')
+  },
+  {
+    meta: {
+      title: 'Penggajian'
+    },
+    path: '/penggajian',
+    name: 'penggajian',
+    component: () => import(/* webpackChunkName: "tables" */ '@/views/Penggajian.vue')
+  },
+  {
+    meta: {
+      title: 'User'
+    },
+    path: '/user',
+    name: 'user',
+    component: () => import(/* webpackChunkName: "tables" */ '@/views/User.vue')
+  },
+  {
+    meta: {
+      title: 'Member'
+    },
+    path: '/member',
+    name: 'member',
+    component: () => import(/* webpackChunkName: "tables" */ '@/views/Member.vue')
+  },
+  {
+    meta: {
+      title: 'Validasi Pembayaran'
+    },
+    path: '/validasipembayaran',
+    name: 'validasipembayaran',
+    component: () => import(/* webpackChunkName: "tables" */ '@/views/ValidasiPembayaran.vue')
   },
   {
     meta: {

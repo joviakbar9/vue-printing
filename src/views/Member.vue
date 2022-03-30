@@ -1,6 +1,6 @@
 <template>
   <title-bar :title-stack="titleStack" />
-  <hero-bar>Transaksi</hero-bar>
+  <hero-bar>Member</hero-bar>
   <main-section>
     <card-component class="mb-6" title="Daftar" :icon="mdiAccountMultiple" has-table>
       <clients-table checkable/>
