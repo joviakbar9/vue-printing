@@ -37,17 +37,20 @@
     <tr v-for="client in itemsPaginated" :key="client.id">
       <!-- <checkbox-cell v-if="checkable" @checked="checked($event, client)"/> -->
       <td data-label="No. ">{{ client.nomor }}</td>
-      <td data-label="Name">{{ client.name }}</td>
-      <td data-label="Company">{{ client.company }}</td>
-      <td data-label="City">{{ client.city }}</td>
-      <td data-label="Created">
-        <small class="text-gray-500 dark:text-gray-400" :title="client.created">{{ client.created }}</small>
+      <td data-label="No. Transaksi">{{ client.nota }}</td>
+      <td data-label="Nama">{{ client.nama }}</td>
+      <td data-label="Hp">{{ client.hp }}</td>
+      <td data-label="TglPesan">
+        {{ client.tglpesan }}
+        <!-- <small class="text-gray-500 dark:text-gray-400" :title="client.created">{{ client.created }}</small> -->
       </td>
-      <td data-label="Progress" class="progress-cell">
+      <td data-label="Total">{{ client.total }}</td>
+      <td data-label="Status">{{ client.statuspb }}</td>
+      <!-- <td data-label="Progress" class="progress-cell">
         <progress max="100" :value="client.progress">{{ client.progress }}</progress>
-      </td>
+      </td> -->
       <td class="actions-cell">
-        <jb-buttons type="justify-start lg:justify-end" no-wrap>
+        <jb-buttons type="justify-start lg:justify-left" no-wrap>
           <jb-button color="success" :icon="mdiEye" small @click="isModalActive = true" />
           <jb-button color="danger" :icon="mdiTrashCan" small @click="isModalDangerActive = true" />
         </jb-buttons>

@@ -25,6 +25,14 @@ const routes = [
   },
   {
     meta: {
+      title: 'Pemesanan'
+    },
+    path: '/pemesanan',
+    name: 'pemesanan',
+    component: () => import(/* webpackChunkName: "tables" */ '@/views/Pemesanan.vue')
+  },
+  {
+    meta: {
       title: 'Daftar Pemesanan'
     },
     path: '/daftarpemesanan',

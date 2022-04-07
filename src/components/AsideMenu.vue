@@ -11,7 +11,7 @@
         <icon :path="mdiMenu" class="cursor-pointer" size="24" />
       </nav-bar-item>
       <div class="flex-1 px-3">
-        <span>Vue</span> <b class="font-black">Printing</b>
+        <b class="font-black">Gajayana</b><b class="font"> Digital Printing</b>
       </div>
     </div>
     <div>

@@ -21,7 +21,7 @@ export default [
       label: 'Dashboard'
     }
   ],
-  'Examples',
+  'Menu',
   [
     {
       to: '/tables',
@@ -29,6 +29,11 @@ export default [
       subLabel: 'Submenus Example',
       icon: mdiTable,
       menu: [
+        {
+          to: '/pemesanan',
+          label: 'Pemesanan',
+          icon: mdiSquareEditOutline
+        },
         {
           to: '/daftarpemesanan',
           label: 'Daftar Pemesanan',
